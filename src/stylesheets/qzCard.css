@@ -1,0 +1,58 @@
+.qz-qn-card-wrap {
+  background-color: var(--qz-primary);
+  color: black;
+  width: 580px;
+  margin: 1rem;
+  padding: 1rem;
+  border-radius: 0.3rem;
+}
+
+.qz-qn-card-chip {
+  background-color: var(--qz-secondary);
+  color: black;
+  width: 400px;
+  margin: 1rem;
+  padding: 0.5rem;
+  border-radius: 0.3rem;
+}
+
+.qz-qn-result-card-wrap {
+  height: 50vh;
+}
+
+.qz-rule-container {
+  background-color: var(--qz-bg);
+  position: relative;
+  top: 76px;
+  min-height: 100vh;
+}
+
+.qz-rule-wrap {
+  width: 600px;
+  background-color: var(--qz-primary);
+  color: white;
+  border-radius: 0.3rem;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 10%), 0 1px 2px 0 rgb(0 0 0 / 6%);
+  margin: 1rem;
+  padding: 1rem;
+  height: 70vh;
+}
+
+.qz-qn-container {
+  display: grid;
+  grid-template-rows: repeat(autofit, minmax(600px, 1fr));
+  justify-items: center;
+  position: relative;
+  top: 76px;
+  background-color: var(--qz-bg);
+}
+
+.qz-result-container {
+  display: grid;
+  grid-template-rows: 1fr;
+  justify-items: center;
+  position: relative;
+  top: 76px;
+  background-color: var(--qz-bg);
+  min-height: 100vh;
+}

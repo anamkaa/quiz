@@ -1,0 +1,74 @@
+.ff-nav-wrap {
+  background-color: var(--qz-primary);
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  padding: 0.5rem 2rem;
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+}
+
+.ff-nav-head {
+  font-weight: 500;
+  font-size: 2.5rem;
+  justify-self: start;
+}
+
+.ff-nav-icon-wrap {
+  justify-self: end;
+}
+
+.ff-hero-wrap {
+  background-color: var(--qz-secondary);
+  position: relative;
+  top: 76px;
+  min-height: 100vh;
+}
+
+.ff-hero-container-main {
+  flex: 50%;
+  padding: 1rem;
+}
+
+.ff-hero-container-text {
+  color: black;
+}
+
+.ff-btn-primary {
+  color: black;
+  text-transform: uppercase;
+  background: var(--qz-primary);
+  font-size: 1.5rem;
+}
+
+.ff-btn-secondary {
+  font-weight: 500;
+  color: black;
+  text-transform: uppercase;
+  background: var(--qz-secondary-light);
+}
+
+.ff-nav-search {
+  width: 100%;
+  padding: 0.2rem;
+  border-radius: 0.2rem;
+  border: none;
+}
+
+.ff-nav-icon-chip {
+  padding: 0 0.5rem;
+}
+
+.ff-hero-text-box {
+  margin: 1rem;
+  line-height: 3rem;
+  padding: 0;
+}
+
+.text-white {
+  color: var(--bg-white);
+}
+
+.cursor {
+  cursor: pointer;
+}
