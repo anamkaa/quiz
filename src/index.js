@@ -4,12 +4,18 @@ import "./index.css";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { BrowserRouter } from "react-router-dom";
+import { ScoreProvider } from "./context/score-context";
+import { FilterProvider } from "./context/filter-context";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
     <BrowserRouter>
-      <App />
+      <ScoreProvider>
+        <FilterProvider>
+          <App />
+        </FilterProvider>
+      </ScoreProvider>
     </BrowserRouter>
   </React.StrictMode>
 );
