@@ -1,9 +1,11 @@
 import React, { useState } from "react";
 import { Funnel } from "phosphor-react";
 import FilterPopup from "../components/FilterPopup";
+import { useFilter } from "../context/filter-context";
 
 const CategoryBar = () => {
   const [filterPopup, setFilterPopup] = useState(false);
+  const { filterDispatch } = useFilter();
 
   return (
     <>
@@ -12,11 +14,44 @@ const CategoryBar = () => {
         id="category"
       >
         <div className="ff-container-content-category flex flex-align-center flex-wrap">
-          <div className="ff-category-text btn  ff-btn-secondary">All</div>
-          <div className="ff-category-text btn  ff-btn-secondary">Webshows</div>
-          <div className="ff-category-text btn  ff-btn-secondary">Cartoons</div>
-          <div className="ff-category-text btn  ff-btn-secondary">Movies</div>
-          <div className="ff-category-text btn  ff-btn-secondary">Animes</div>
+          <div
+            className="ff-category-text btn  ff-btn-secondary"
+            onClick={() => filterDispatch({ type: "CLEAR_CATEGORY_FILTER" })}
+          >
+            All
+          </div>
+          <div
+            className="ff-category-text btn  ff-btn-secondary"
+            onClick={() =>
+              filterDispatch({ type: "FILTER_BY_CATEGORY", payload: "webshow" })
+            }
+          >
+            Webshows
+          </div>
+          <div
+            className="ff-category-text btn  ff-btn-secondary"
+            onClick={() =>
+              filterDispatch({ type: "FILTER_BY_CATEGORY", payload: "cartoon" })
+            }
+          >
+            Cartoons
+          </div>
+          <div
+            className="ff-category-text btn  ff-btn-secondary"
+            onClick={() =>
+              filterDispatch({ type: "FILTER_BY_CATEGORY", payload: "movie" })
+            }
+          >
+            Movies
+          </div>
+          <div
+            className="ff-category-text btn  ff-btn-secondary"
+            onClick={() =>
+              filterDispatch({ type: "FILTER_BY_CATEGORY", payload: "anime" })
+            }
+          >
+            Animes
+          </div>
         </div>
 
         <div
