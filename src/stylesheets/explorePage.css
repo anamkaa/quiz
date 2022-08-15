@@ -50,7 +50,7 @@
 
 .ff-container-video-card {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
 }
 
 .ff-video-card {

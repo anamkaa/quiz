@@ -1,0 +1,88 @@
+import { v4 as uuid } from "uuid";
+
+export const quiz = [
+  {
+    _id: uuid(),
+    title: "BreakingBad",
+    description: "",
+    level: "medium",
+    imgSrc: "https://picfiles.alphacoders.com/102/thumb-102770.jpg",
+    categoryName: "webshow",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "GameofThrones",
+    description: "",
+    level: "hard",
+    imgSrc:
+      "https://w0.peakpx.com/wallpaper/324/700/HD-wallpaper-got-game-of-thrones.jpg",
+    categoryName: "webshow",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "TheFlintstones",
+    description: "",
+    level: "easy",
+    imgSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwClmrjcuCcrkfIXUzergy-ZU-BqN_Hw2KLA&usqp=CAU",
+    categoryName: "cartoon",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "LooneyToons",
+    description: "",
+    level: "medium",
+    imgSrc:
+      "https://i.pinimg.com/originals/43/15/fd/4315fde59ce8d77b6ef4657c0e4daa37.jpg",
+    categoryName: "cartoon",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "Inception",
+    description: "",
+    level: "hard",
+    imgSrc: "https://picfiles.alphacoders.com/154/thumb-154664.jpg",
+    categoryName: "movie",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "Parasite",
+    description: "",
+    level: "medium",
+    imgSrc: "https://wallpaperaccess.com/full/1423165.jpg",
+    categoryName: "movie",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "DragonBallZ",
+    description: "",
+    level: "medium",
+    imgSrc: "https://wallpaper.dog/large/17192197.jpg",
+    categoryName: "anime",
+    questionNumber: 5,
+    time: 5,
+  },
+  {
+    _id: uuid(),
+    title: "Naruto",
+    description: "",
+    level: "easy",
+    imgSrc:
+      "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR50zVUFNZ3tyXsCNAMyK8rzLa_be9HTluAbg&usqp=CAU",
+    categoryName: "anime",
+    questionNumber: 5,
+    time: 5,
+  },
+];

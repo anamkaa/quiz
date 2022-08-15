@@ -1,26 +1,22 @@
 import React from "react";
 import { Link } from "react-router-dom";
-
-const categories = [
-  {
-    categoryName: "WebShows",
-  },
-  {
-    categoryName: "Movies",
-  },
-  {
-    categoryName: "Animes",
-  },
-  {
-    categoryName: "Cartoons",
-  },
-];
+import { useFilter } from "../context/filter-context";
+import { categories } from "../database/categories";
 
 const CategoryPill = ({ categories }) => {
+  const { filterDispatch } = useFilter();
   return (
     <>
       <Link to={`/explore/${categories.categoryName}`}>
-        <button className="btn ff-btn-secondary">
+        <button
+          className="btn ff-btn-secondary"
+          onClick={() =>
+            filterDispatch({
+              type: "FILTER_BY_CATEGORY",
+              payload: categories.categoryName,
+            })
+          }
+        >
           {categories.categoryName}
         </button>
       </Link>

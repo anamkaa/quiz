@@ -3,8 +3,19 @@ import QuestionCard from "../components/QuestionCard";
 import { ArrowCircleUp } from "phosphor-react";
 import Navbar from "../components/Navbar";
 import { Link } from "react-router-dom";
+import { questions } from "../database/questions";
+import { useParams } from "react-router-dom";
+import { useScore } from "../context/score-context";
 
 const QuestionPage = () => {
+  const title = useParams();
+  // console.log(title);
+  // console.log(questions.filter((item) => item.title === title.title));
+
+  const { scoreDispatch } = useScore();
+
+  const selectedArray = questions.filter((item) => item.title === title.title);
+
   return (
     <>
       <Navbar />
@@ -17,21 +28,13 @@ const QuestionPage = () => {
         }}
       />
 
-      <div
-        className="qz-qn-container"
-      >
-        <QuestionCard />
-        <QuestionCard />
-        <QuestionCard />
-        <QuestionCard />
-        <QuestionCard />
-        <QuestionCard />
-        <QuestionCard />
+      <div className="qz-qn-container">
+        {selectedArray.map((item) => {
+          return <QuestionCard question={item} key={item._id} />;
+        })}
 
         <Link to="/result">
-          <div
-            className="qz-qn-card-question text-center qz-qn-card-chip"
-          >
+          <div className="qz-qn-card-question text-center qz-qn-card-chip">
             Submit
           </div>
         </Link>
@@ -39,6 +42,7 @@ const QuestionPage = () => {
         <Link to="/">
           <div
             className="qz-qn-card-question text-center qz-qn-card-chip"
+            onClick={() => scoreDispatch({ type: "RESET" })}
           >
             Exit
           </div>
