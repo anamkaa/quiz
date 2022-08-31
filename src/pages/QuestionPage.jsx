@@ -9,8 +9,6 @@ import { useScore } from "../context/score-context";
 
 const QuestionPage = () => {
   const title = useParams();
-  // console.log(title);
-  // console.log(questions.filter((item) => item.title === title.title));
 
   const { scoreDispatch } = useScore();
 
